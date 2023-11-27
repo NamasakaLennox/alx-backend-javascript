@@ -1,11 +1,11 @@
 export default function taskBlock(trueOrFalse) {
   /* retained hoisting */
-  var task = false;
-  var task2 = true;
+  let task = false;
+  let task2 = true;
 
   if (trueOrFalse) {
-    let task = true;
-    let task2 = false;
+    task = false;
+    task2 = true;
   }
 
   return [task, task2];
