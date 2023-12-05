@@ -1,11 +1,13 @@
 const cleanSet = (set, startString) => {
   const array = [...set];
 
-  if (startString === '') return '';
+  if (typeof startString !== 'string') return '';
+
+  if (startString.length === 0) return '';
 
   const newArray = [];
   for (const elem of array) {
-    if (elem.startsWith(startString)) {
+    if (elem && elem.indexOf(startString) === 0) {
       newArray.push(elem.replace(startString, ''));
     }
   }
